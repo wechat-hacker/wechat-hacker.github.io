@@ -213,6 +213,30 @@ body {
     pointer-events: none;
 }
 
+/* Wxid-Add-Friend */
+#wxid-add-friend {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #141414; /* temp */
+    display: none;
+}
+
+#wxid-add-friend::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 98;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.1);
+    display: block;
+    pointer-events: none;
+}
+
 #btnBack {
     height: 20px;
     position: absolute;
@@ -279,6 +303,36 @@ body {
     font-size: 16px;
     color: #FFF;
 }
+
+#wxid-add-friend img {
+    height: 600px;
+    max-height: 66.66%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
+#wxid-add-friend p {
+    position: absolute;
+    z-index: 99;
+    top: 22%;
+    left: 50%;
+    margin-top: -11px;
+    padding-top: 1px;
+    transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    font-size: 16px;
+    color: #FFF;
+}
+
 /* EXPERIENCIA */
 
 #global {
@@ -798,6 +852,77 @@ footer p a:hover {
     line-height: 34px;
     text-align: center;
 }
+
+/**start another button add wxid**/
+
+#btnExperimentaWxid {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin: -20px 0 0 -80px;
+    padding-left: 33px;
+    border: 1px solid #FFF;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: transparent;
+    display: block;
+    cursor: pointer;
+}
+
+#btnExperimentaWxid::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 19px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0) 66.67%, #FFF);
+    background: -o-linear-gradient(to right, rgba(255,255,255,0) 66.67%, #FFF);
+    background: -moz-linear-gradient(to right, rgba(255,255,255,0) 66.67%, #FFF);
+    background: -webkit-linear-gradient(to right, rgba(255,255,255,0) 66.67%, #FFF);
+    display: block;
+    opacity: 0.2;
+    transition: 500ms;
+    -o-transition: 500ms;
+    -ms-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
+}
+
+#btnExperimentaWxid:hover::before {
+    opacity: 0.35;
+}
+
+#btnExperimentaWxid::after {
+    content: '';
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: url(../img/btn-experimenta.svg) center no-repeat;
+    background-size: 100% 100%;
+    display: block;
+}
+
+#btnExperimentaWxid span {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-size: 15px;
+    color: #FFF;
+    line-height: 34px;
+    text-align: center;
+}
+
+/**start another button add wxid friend end...**/
 
 #logo {
     width: auto;

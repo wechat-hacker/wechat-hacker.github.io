@@ -143,6 +143,32 @@ $(function(){
 	});
 });
 
+//wxid-ios-soft
+
+$(function(){
+	$('#btnExperimentaIos').click(function(){
+		$('#global').css('pointer-events','none');
+		$('#content').addClass('hidden');
+		$('#grain, #morph, #lang, #social, footer').fadeOut(500);
+		setTimeout(function(){
+			$('#wxid-ios-soft').fadeIn(625);
+			$('#btnBack').addClass('shown');
+		},625);
+	});
+	$('#btnBack').click(function(){
+		$('#global').css('pointer-events','all');
+		$('#wxid-ios-soft').fadeOut(500);
+		$('#btnBack').removeClass('shown');
+		setTimeout(function(){
+			$('#content').removeClass('hidden');
+			$('#grain').fadeIn(500);
+			setTimeout(function(){
+				$('#morph, #lang, #social, footer').fadeIn(500);
+			},625);
+		},500);
+	});
+});
+
 
 // CAPTIONS
 $(function(){
